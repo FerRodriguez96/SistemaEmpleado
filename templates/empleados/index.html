@@ -7,6 +7,29 @@
     <title>inicio</title>
 </head>
 <body>
-    ¡Hola Flask!
+    
+    <table class="table table-dark">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for empleado in empleados %}
+            <tr>
+                <td>{{empleado[0]}}</td>
+                <td>{{empleado[3]}}</td>
+                <td>{{empleado[1]}}</td>
+                <td>{{empleado[2]}}</td>
+                <td>Editar | Borrar</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 </body>
 </html>
