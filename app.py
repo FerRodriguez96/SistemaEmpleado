@@ -117,7 +117,7 @@ def storage():
     cursor.execute(sql,datos)
     conn.commit()
 
-    return render_template('empleados/index.html')
+    return redirect ('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
