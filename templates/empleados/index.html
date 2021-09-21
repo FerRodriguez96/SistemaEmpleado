@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <table class="table table-dark">
+    <table class="table table-light">
         <thead class="thead-light">
             <tr>
                 <th>#</th>
@@ -25,7 +25,9 @@
                 <td>{{empleado[3]}}</td>
                 <td>{{empleado[1]}}</td>
                 <td>{{empleado[2]}}</td>
-                <td>Editar | Borrar</td>
+                <td>Editar | 
+                    <a href="/destroy/{{empleado[0]}}">Eliminar</a>
+                    </td>
             </tr>
             {% endfor %}
         </tbody>
