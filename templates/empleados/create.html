@@ -1,6 +1,20 @@
 {% include 'header.html' %}
+
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+    <br>
+    <div class= "alert alert-danger" role="alert">
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% endwith %}
+
 <form method="post" action="/store" enctype="multipart/form-data">
-    <br><br>
+    <br>
     <div class="card">
         <div class="card-header">
             Ingresar empleados
