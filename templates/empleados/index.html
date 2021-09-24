@@ -30,9 +30,9 @@
 
                 <td>{{empleado[1]}}</td>
                 <td>{{empleado[2]}}</td>
-                <td><a href="/edit/{{empleado[0]}}">Editar</a>
+                <td><a class="btn btn-warning" href="/edit/{{empleado[0]}}">Editar</a>
                     |
-                    <a href="/destroy/{{empleado[0]}}">Eliminar</a>
+                    <a onclick="return confirm('¿Desea borrar el empleado?')"class= "btn btn-danger" href="/destroy/{{empleado[0]}}">Eliminar</a>
                     </td>
             </tr>
             {% endfor %}
